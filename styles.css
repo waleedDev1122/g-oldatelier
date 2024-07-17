@@ -1,0 +1,397 @@
+@font-face {
+    font-family: "BroadacreRegular";
+    src: url(assets/fonts/fonnts.com-Broadacre_Light_1.otf);
+}
+
+@font-face {
+    font-family: "BroadacreBold";
+    src: url(assets/fonts/fonnts.com-Broadacre_Regular_4.otf);
+}
+
+@font-face {
+    font-family: "MoonTimeRegular";
+    src: url(assets/fonts/fonnts.com-MoonTime_Regular.ttf);
+}
+
+body {
+    font-family: "BroadacreRegular";
+}
+
+.moon-time-font {
+    font-family: "MoonTimeRegular";
+}
+
+.header {
+    background-color: #eeebf0;
+    height: auto;
+    padding: 10px 64px 10px 64px;
+    box-shadow: 0px 4px 60px 0px #FFFFFF0D;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar {
+    padding: 0px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-collapse .navbar-nav {
+    padding: 15px 0px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.nav-item:last-child {
+    padding-right: 0px;
+}
+
+.nav-link {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    color: #593769;
+}
+
+.nav-link.book-now {
+    background-color: #6b0099;
+    color: #ffffff !important;
+    border-radius: 8px;
+}
+.nav-link:hover {
+    border-bottom: 2px solid #6b0099;
+}
+
+.nav-link.active {
+    color: #6b0099 !important;
+}
+
+/* Header Styles End */
+
+
+/* Hero Section Styles Start */
+
+.hero-section {
+    height: 710px;
+    position: relative;
+}
+
+.hero-container {
+    width: 100%;
+    border-radius: 12px;
+    height: auto;
+    padding: 0px;
+    position: relative;
+    min-height: 710px;
+}
+
+.hero-container .contact-btn {
+    width: 180px;
+    height: 60px;
+    background: #6b0099;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.hero-section .bg-image {
+    position: absolute;
+    width: 100%;
+    height: 710px;
+}
+
+.w-55 {
+    width: 55% !important;
+}
+
+.hero-container .main-head {
+    color: #593769;
+    font-size: 47px;
+    text-align: center;
+}
+
+.section-head{
+    color: #593769;
+    font-size: 40px;
+    text-align: center;
+}
+
+.section-head-moon{
+    color: #98761e;
+    font-size: 68px;
+    text-align: center;
+    line-height: 1;
+}
+
+.sub-head {
+    font-size: 18px;
+    color: #593769;
+}
+
+.text {
+    font-size: 16px;
+    color: #593769;
+}
+
+/* Hero Section Styles End */
+
+/* How It Works Section Styles Start */
+
+
+
+.step-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.shaded-bg{
+    background-color: #eee;
+}
+
+.h-44 {
+    height: 44px;
+}
+
+.h-170 {
+    height: 170px;
+}
+
+.h-96 {
+    height: 96px;
+}
+
+.intro-text{
+    font-size: 18px;
+    color: #593769;
+}
+
+/* How It Works Section Styles End */
+
+/* .carousel-indicators button.thumbnail {
+    width: 100px;
+  }
+  .carousel-indicators button.thumbnail:not(.active) {
+    opacity: 0.7;
+  }
+  .carousel-indicators {
+    position: static;
+  }
+  @media screen and (min-width: 992px) {
+    .carousel {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  } */
+
+  .carousel-padding {
+    padding: 0 200px;
+}
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+/* .carousel-item {
+    height: 350px;
+    overflow-y: auto;
+} */
+
+.carousel-control-next,
+.carousel-control-prev {
+    top: -300px;
+}
+  
+.carousel-control-prev-icon {
+    background-image: url(assets/images/carousel/previous.png) !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url(assets/images/carousel/next.png) !important;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: static; /* Change from absolute to static */
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.carousel-indicators button {
+    flex: 0 0 auto;
+    width: 220px !important;
+    height: 220px !important;
+    border: none;
+    border-radius: 0;
+    margin: 0 10px !important;
+    background-color: transparent;
+    padding: 0;
+}
+
+.carousel-indicators button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.carousel-indicators button.active img {
+    border-color: #007bff; /* Highlight border color for active slide */
+}
+
+.carousel-indicators button:focus {
+    outline: none;
+}
+.contact-detail-section {
+    background-color: #f8f8f8;
+    padding: 40px;
+}
+.contact-form-section {
+    background-color: #e1ae36;
+    padding: 40px;
+}
+
+.contact-form-section .head {
+    font-size: 40px;
+    text-align: center;
+}
+
+.contact-detail-section .head {
+    font-size: 30px;
+    text-align: center;
+    color: #593769;
+}
+
+.section-divider{
+    width: 80%;
+    border-bottom: 1px solid #593769;
+    padding-bottom: 30px;
+}
+
+.section-divider a {
+    color: #593769;
+    text-decoration: none;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+.submit-button {
+    background: #6b0099;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.primary-color-text {
+    color: #593769;
+}
+
+input.form-control{
+    height: 50px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+.product-card .card-body {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card .card-body  .card-text{
+    text-align: center;
+    color: #593769;
+}
+
+.product-card .card-body button {
+    background-color: #fff;
+    color: #6b0099;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 1px solid #6b0099;
+    text-align: center;
+}
+
+.quote-button {
+    background-color: #6b0099;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.quote-button:hover{
+    color: #fff;
+}
+
+.primary-footer {
+    background-color: #eeebf0;
+    height: auto;
+    padding: 20px 40px 20px 40px;   
+}
+
+.primary-footer a {
+    color: #593769;
+    text-decoration: none;
+    line-height: 28px;
+}
+
+.secondary-footer {
+    background-color: #6b0099;
+    height: auto;
+    padding: 20px 40px 20px 40px;  
+}
+
+.secondary-footer p{
+    margin: 0px;
+    color: #fff;
+    font-size: 14px;
+}
