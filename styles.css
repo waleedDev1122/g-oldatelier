@@ -178,7 +178,7 @@ body {
 }
 
 .h-96 {
-    height: 96px;
+    height: 110px;
 }
 
 .intro-text{
@@ -341,6 +341,7 @@ input.form-control{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #593769;
 }
 
 .product-card .card-body  .card-text{
@@ -394,4 +395,26 @@ input.form-control{
     margin: 0px;
     color: #fff;
     font-size: 14px;
+}
+
+.terms .section {
+    color: #593769;
+    margin-bottom: 50px;
+}
+
+#goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Initially hidden */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#goToTop:hover {
+    background-color: #0056b3;
 }

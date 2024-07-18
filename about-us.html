@@ -20,7 +20,7 @@
         <header>
             <nav class="navbar navbar-expand-lg">
                 <div class="container p-0">
-                    <a class="navbar-brand" href="/index.html">
+                    <a class="navbar-brand" href="index.html">
                         <img src="assets/images/common/logo.svg" width="200" alt="Logo"
                             class="d-inline-block align-text-top">
                     </a>
@@ -35,10 +35,13 @@
                                 <a class="nav-link" href="index.html#how-it-works">How it works</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">About Us</a>
+                                <a class="nav-link" href="index.html#main-services">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact-form">Contact Us</a>
+                                <a class="nav-link" href="about-us.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-form">Contacts</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="shop.html">Shop</a>
@@ -119,25 +122,14 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 intro-text mt-5">
-                <span class="fw-bold">Quality Second-Hand Products</span>
-                We understand that customers seeking second-hand items don't want just any used product; they
-                desire quality. G’Old Atelier ensures that our offerings are not only second-hand but in excellent
-                condition, providing customers with products that are both sustainable and stylish.
-            </div>
-        </div>
-
-        <div class="row">
             <div class="col-md-5 mt-5">
                 <img class="img-fluid rounded-4" src="assets/images/about us/market-gap.webp" />
             </div>
             <div class="col-md-7 intro-text mt-5 d-flex flex-column align-items-start justify-content-center">
-                <span class="fw-bold">Market Gap in Sweden</span>
-                G’Old Atelier identifies and addresses a market gap in
-                Sweden, particularly in Stockholm. With a strong culture
-                for second-hand shopping and a lack of restoration
-                businesses, we aim to fill this void and become a go-to
-                destination for those seeking sustainable fashion choices.
+                <span class="fw-bold">Quality Second-Hand Products</span>
+                We understand that customers seeking second-hand items don't want just any used product; they
+                desire quality.<br> G’Old Atelier ensures that our offerings are not only second-hand but in excellent
+                condition, providing customers with products that are both sustainable and stylish.
             </div>
         </div>
 
@@ -229,7 +221,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="email" class="form-label">E-Mail (Mandatory)</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" >
                     </div>
                     <div class="mb-4">
                         <label for="message" class="form-label">Message</label>
@@ -240,7 +232,7 @@
                         <input type="file" class="form-control" id="addPictures" accept="image/*" multiple>
                     </div>
                     <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <input type="checkbox" class="form-check-input" id="terms" >
                         <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
@@ -259,8 +251,8 @@
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="terms-and-privacy.html">Privacy Policy<br>
+                    Terms & Conditions</a>
                     <a href="shipping-and-returns.html">Shipping & Returns</a>
                 </div>
             </div>
@@ -280,6 +272,8 @@
         </div>
     </section>
 
+    <button id="goToTop" style="display: none;">Go to Top</button>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
