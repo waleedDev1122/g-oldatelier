@@ -418,3 +418,64 @@ input.form-control{
 #goToTop:hover {
     background-color: #0056b3;
 }
+
+.useful-info{
+    color: #593769;
+}
+
+.success-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 10px 15px 10px 15px;
+    }
+    
+    .header img {
+        width: 80px;
+        height: auto;
+    }
+
+    .nav-link.book-now {
+        padding: 10px 15px;
+    }
+
+    .section-head {
+        font-size: 24px;
+    }
+
+    .product-card .card-body button{
+        padding: 10px 15px;
+    }
+
+    .hero-container .main-head {
+        font-size: 32px;
+    }
+
+    .hero-section {
+        height: 420px;
+    }
+
+    .hero-section .bg-image {
+        height: 420px;
+    }
+
+    .hero-container{
+        min-height: 420px;
+    }
+
+    .carousel-padding{
+        padding: 0px 70px;
+    }
+
+    .section-head-moon{
+        font-size: 40px;
+    }
+
+}

@@ -4,11 +4,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phoneNumber'];
     $email = $_POST['email'];
     $message_text = $_POST['message'];
-    $attachments = $_FILES['attachments'];
+    $attachments = isset($_FILES['attachments']) ? $_FILES['attachments'] : null;
 
     $to = "waleedravian1122@gmail.com"; // Replace with the recipient's email address
     $subject = "Email with Attachments from $name";
-    $from = "From: $email";
+    $from = "From: helloyou@g-oldatelier.se";
 
     // Create a boundary string
     $boundary = md5("random");
@@ -24,32 +24,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
     $message .= chunk_split(base64_encode("Name: $name\nPhone: $phone\nEmail: $email\nMessage: $message_text"));
 
-    // Process each file
-    for ($i = 0; $i < count($attachments['name']); $i++) {
-        if ($attachments['error'][$i] === UPLOAD_ERR_OK) {
-            $file_tmp_name = $attachments['tmp_name'][$i];
-            $file_name = $attachments['name'][$i];
-            $file_size = $attachments['size'][$i];
-            $file_type = $attachments['type'][$i];
+    // Process each file if there are attachments
+    if ($attachments) {
+        for ($i = 0; $i < count($attachments['name']); $i++) {
+            if ($attachments['error'][$i] === UPLOAD_ERR_OK) {
+                $file_tmp_name = $attachments['tmp_name'][$i];
+                $file_name = $attachments['name'][$i];
+                $file_size = $attachments['size'][$i];
+                $file_type = $attachments['type'][$i];
 
-            // Read the file content
-            $handle = fopen($file_tmp_name, "r");
-            $content = fread($handle, $file_size);
-            fclose($handle);
+                // Read the file content
+                $handle = fopen($file_tmp_name, "r");
+                $content = fread($handle, $file_size);
+                fclose($handle);
 
-            // Encode the content in base64
-            $encoded_content = chunk_split(base64_encode($content));
+                // Encode the content in base64
+                $encoded_content = chunk_split(base64_encode($content));
 
-            // Attachment
-            $message .= "--$boundary\r\n";
-            $message .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
-            $message .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
-            $message .= "Content-Transfer-Encoding: base64\r\n";
-            $message .= "X-Attachment-Id: ".rand(1000, 99999)."\r\n\r\n";
-            $message .= $encoded_content;
-        } else {
-            echo "Error uploading file.";
-            exit;
+                // Attachment
+                $message .= "--$boundary\r\n";
+                $message .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
+                $message .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
+                $message .= "Content-Transfer-Encoding: base64\r\n";
+                $message .= "X-Attachment-Id: ".rand(1000, 99999)."\r\n\r\n";
+                $message .= $encoded_content;
+            } else {
+                echo "Error uploading file.";
+                exit;
+            }
         }
     }
 
@@ -58,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Email sent successfully!";
+        header("Location: success.html");
     } else {
         echo "Failed to send email.";
     }

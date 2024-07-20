@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>GoldEtailer - About Us</title>
+    <title>Shop | G-Old Atelier</title>
+    <meta name="title" content="Shop Secondhand Accessories & Restored Leather Goods | G-Old Atelier">
+    <meta name="description" content="Browse our collection of secondhand accessories and expertly restored leather goods. From luxury handbags to vintage shoes, find unique and sustainable fashion pieces at G-Old Atelier.">
+    <meta name="keywords" content="shop secondhand accessories, restored leather goods, luxury handbags, vintage shoes, sustainable fashion, G-Old Atelier shop">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,7 +23,7 @@
         <header>
             <nav class="navbar navbar-expand-lg">
                 <div class="container p-0">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <img src="assets/images/common/logo.svg" width="200" alt="Logo"
                             class="d-inline-block align-text-top">
                     </a>
@@ -32,19 +35,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html#how-it-works">How it works</a>
+                                <a class="nav-link" href="/#how-it-works">How it works</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html#main-services">Services</a>
+                                <a class="nav-link" href="/#main-services">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">About</a>
+                                <a class="nav-link" href="/about-us">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contact-form">Contacts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">Shop</a>
+                                <a class="nav-link" href="/shop">Shop</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link book-now" href="#contact-form">BOOK NOW</a>
@@ -73,10 +76,9 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="productModalLabel"></h5>
-                        <button type="button" id="closeButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <button type="button" class="btn-close" id="backButton" aria-label="Close"
-                            style="display: none;"></button>
-                        
+                        <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn btn-secondary" id="backButton"
+                            style="display: none;">Back</button>
                     </div>
                     <div class="modal-body">
                         <!-- Product images -->
@@ -91,9 +93,36 @@
                     <div class="modal-body full-image text-center" style="display: none;">
                         <img id="modalImage" src="" class="img-fluid" alt="Product Image">
                     </div>
+                    <div class="modal-body shipping-form" style="display: none;">
+                        <!-- Shipping Form in the Modal -->
+                        <form id="shippingForm" class="needs-validation col-md-6" novalidate>
+                            <div class="mb-4">
+                                <label for="shippingFullName" class="form-label">Full Name (mandatory)</label>
+                                <input type="text" class="form-control" id="shippingFullName" name="fullName">
+                                <div class="invalid-feedback">Please enter name.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="shippingEmail" class="form-label">Email (mandatory)</label>
+                                <input type="email" class="form-control" id="shippingEmail" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="shippingPhone" class="form-label">Phone (optional)</label>
+                                <input type="tel" class="form-control" id="shippingPhone" name="phone">
+                            </div>
+                            <div class="mb-4">
+                                <label for="shippingAddress" class="form-label">Shipping Address (mandatory)</label>
+                                <textarea class="form-control" id="shippingAddress" name="address" required></textarea>
+                                <div class="invalid-feedback">Please enter a valid address.</div>
+                            </div>
+                        </form>
+
+                    </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Buy Now</button>
+                        <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="buyNowButton">Buy Now</button>
+                        <button type="button" class="btn btn-primary" id="submitRequestButton"
+                            style="display: none;">Submit Request</button>
                     </div>
                 </div>
             </div>
@@ -126,7 +155,7 @@
                         <a href="https://instagram.com/g.oldatelier" target="_blank">instagram.com/g.oldatelier</a>
                     </div>
                 </div>
-                <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="mt-5 d-flex flex-column justify-content-center align-items-center useful-info">
                     <h5 class="head">USEFUL INFORMATION</h5>
                     <p class="text-center">All consultations are free of charge. When you're ready to place your order
                         please follow this
@@ -170,7 +199,7 @@
                     </div>
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="terms">
-                        <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+                        <label class="form-check-label" for="terms">I agree to the <a class="primary-color-text" href="/terms-and-privacy">terms and conditions</a></label>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
                         <button type="submit" class="submit-button">SUBMIT YOUR REQUEST</button>
@@ -188,9 +217,9 @@
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4 d-flex flex-column align-items-end">
-                    <a href="terms-and-privacy.html">Privacy Policy<br>
+                    <a href="/terms-and-privacy">Privacy Policy<br>
                     Terms & Conditions</a>
-                    <a href="shipping-and-returns.html">Shipping & Returns</a>
+                    <a href="/shipping-and-returns">Shipping & Returns</a>
                 </div>
             </div>
         </div>
